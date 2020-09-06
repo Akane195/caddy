@@ -64,7 +64,7 @@ Download_caddy(){
 	else
 		echo -e "${Error_font_prefix}[错误]${Font_suffix} 不支持 ${bit} !" && exit 1
 	fi
-	[[ ! -e "caddy" ]] && echo -e "${Error_font_prefix}[错误]${Font_suffix} Caddy 下载失败 !" && exit 1
+	[[ ! -e "caddy.zip" ]] && echo -e "${Error_font_prefix}[错误]${Font_suffix} Caddy 下载失败 !" && exit 1
 	unzip caddy.zip
 	rm -rf "caddy.zip"
 #	tar zxf "caddy_linux.tar.gz"
