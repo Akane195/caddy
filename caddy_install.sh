@@ -67,6 +67,8 @@ Download_caddy(){
 	[[ ! -e "caddy.zip" ]] && echo -e "${Error_font_prefix}[错误]${Font_suffix} Caddy 下载失败 !" && exit 1
 	unzip caddy.zip
 	rm -rf "caddy.zip"
+	chmod +x caddy
+	touch Caddyfile
 #	tar zxf "caddy_linux.tar.gz"
 #	rm -rf "caddy_linux.tar.gz"
 #	[[ ! -e ${caddy_file} ]] && echo -e "${Error_font_prefix}[错误]${Font_suffix} Caddy 解压失败或压缩文件错误 !" && exit 1
