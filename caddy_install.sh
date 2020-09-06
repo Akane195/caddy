@@ -56,11 +56,11 @@ Download_caddy(){
 #	elif [[ ${bit} == "i686" ]]; then
 #		wget --no-check-certificate -O "caddy" "https://caddyserver.com/download/linux/386${extension_all}" && caddy_bit="caddy_linux_386"
 	if [[ ${bit} == "x86_64" ]]; then
-		wget --no-check-certificate -O "caddy.zip" "https://cdn.jsdelivr.net/gh/Akane195/src@0.0.2/caddy/caddy_linux_amd64.zip" && caddy_bit="caddy_linux_amd64"
+		wget --no-check-certificate -O "caddy.zip" "https://cdn.jsdelivr.net/gh/Akane195/src@0.0.3/caddy/caddy_linux_amd64.zip" && caddy_bit="caddy_linux_amd64"
 	elif [[ ${bit} == "aarch64" ]]; then
-		wget --no-check-certificate -O "caddy.zip" "https://cdn.jsdelivr.net/gh/Akane195/src@0.0.2/caddy/caddy_linux_arm64.zip" && caddy_bit="caddy_linux_arm64"
+		wget --no-check-certificate -O "caddy.zip" "https://cdn.jsdelivr.net/gh/Akane195/src@0.0.3/caddy/caddy_linux_arm64.zip" && caddy_bit="caddy_linux_arm64"
 	elif [[ ${bit} == "armv7l" ]]; then
-		wget --no-check-certificate -O "caddy.zip" "https://cdn.jsdelivr.net/gh/Akane195/src@0.0.2/caddy/caddy_linux_arm7.zip" && caddy_bit="caddy_linux_arm7"
+		wget --no-check-certificate -O "caddy.zip" "https://cdn.jsdelivr.net/gh/Akane195/src@0.0.3/caddy/caddy_linux_arm7.zip" && caddy_bit="caddy_linux_arm7"
 	else
 		echo -e "${Error_font_prefix}[错误]${Font_suffix} 不支持 ${bit} !" && exit 1
 	fi
