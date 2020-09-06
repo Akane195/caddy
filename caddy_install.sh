@@ -61,11 +61,12 @@ Download_caddy(){
 		wget --no-check-certificate -O "caddy.zip" "https://cdn.jsdelivr.net/gh/Akane195/src@0.0.2/caddy/caddy_linux_arm64.zip" && caddy_bit="caddy_linux_arm64"
 	elif [[ ${bit} == "armv7l" ]]; then
 		wget --no-check-certificate -O "caddy.zip" "https://cdn.jsdelivr.net/gh/Akane195/src@0.0.2/caddy/caddy_linux_arm7.zip" && caddy_bit="caddy_linux_arm7"
-	elses
+	else
 		echo -e "${Error_font_prefix}[错误]${Font_suffix} 不支持 ${bit} !" && exit 1
 	fi
 	[[ ! -e "caddy" ]] && echo -e "${Error_font_prefix}[错误]${Font_suffix} Caddy 下载失败 !" && exit 1
 	unzip caddy.zip
+	rm -rf "caddy.zip"
 #	tar zxf "caddy_linux.tar.gz"
 #	rm -rf "caddy_linux.tar.gz"
 #	[[ ! -e ${caddy_file} ]] && echo -e "${Error_font_prefix}[错误]${Font_suffix} Caddy 解压失败或压缩文件错误 !" && exit 1
